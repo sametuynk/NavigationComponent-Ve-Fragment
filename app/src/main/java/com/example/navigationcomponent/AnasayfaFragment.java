@@ -22,7 +22,15 @@ public class AnasayfaFragment extends Fragment {
         binding=FragmentAnasayfaBinding.inflate(inflater,container,false);
 
         binding.buttonBasla.setOnClickListener(v -> {
-            Navigation.findNavController(v).navigate(R.id.oyunEkraninaGecis);
+
+            Kisiler kisi=new Kisiler(1,"Mehmet"); //NESNE SINIFI İLE VERİ GÖNDERME İŞLEMİ
+
+            AnasayfaFragmentDirections.OyunEkraninaGecis gecis =AnasayfaFragmentDirections.oyunEkraninaGecis(kisi); //FRAGMENTLER İLE VERİ GÖNDERME İŞLEMİ
+            gecis.setAd("Ahmet");
+            gecis.setYas(24);
+            gecis.setBoy(1.78f);
+            gecis.setBekarMi(true);
+            Navigation.findNavController(v).navigate(gecis);
 
         });
 
