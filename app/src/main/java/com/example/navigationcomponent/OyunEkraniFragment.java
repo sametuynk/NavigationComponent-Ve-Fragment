@@ -3,6 +3,7 @@ package com.example.navigationcomponent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,7 @@ public class OyunEkraniFragment extends Fragment {
         binding=FragmentOyunEkraniBinding.inflate(inflater,container,false);
 
         binding.buttonBitir.setOnClickListener(v -> {
+            Navigation.findNavController(v).navigate(R.id.sonucEkraninaGecis);
 
         });
 

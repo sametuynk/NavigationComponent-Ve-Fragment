@@ -3,6 +3,7 @@ package com.example.navigationcomponent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +22,7 @@ public class AnasayfaFragment extends Fragment {
         binding=FragmentAnasayfaBinding.inflate(inflater,container,false);
 
         binding.buttonBasla.setOnClickListener(v -> {
+            Navigation.findNavController(v).navigate(R.id.oyunEkraninaGecis);
 
         });
 
